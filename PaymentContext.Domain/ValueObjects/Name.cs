@@ -1,3 +1,4 @@
+using Flunt.Validations;
 using PaymentContext.Shared.ValueObjects;
 
 namespace PaymentContext.Domain.Entities.ValueObjects
@@ -8,9 +9,10 @@ namespace PaymentContext.Domain.Entities.ValueObjects
         {
             FirstName = firstName;
             LastName = lastName;
-
-            if (string.IsNullOrEmpty(FirstName))
-                AddNotification("FirstName", "Invalid Name");
+            AddNotifications(new Contract().Requires().HasMinLen(FirstName, 3, "Name.FirstName", "Name is so short.")
+                                                      .HasMinLen(LastName, 3, "Name.LastName", "Name is so short")
+                                                      .HasMaxLen(FirstName, 40, "Name.FirstName", "Name is so long.")
+                                                      .HasMaxLen(LastName, 40, "Name.LastName", "Name is so long."));
         }
 
         public string FirstName { get; private set; }
