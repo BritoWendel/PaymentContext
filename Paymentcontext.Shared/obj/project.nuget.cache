@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ivqjjqhc/D2+RCP4eVeM16fE1Btcvo3HXOwXgVzNh1bl2tdA+ec86+wDCtPtADP1IZA90Hbp+QQkBnOyOGYnKg==",
+  "dgSpecHash": "u7Z3v9K2MkoEkIC9fred2KYSqPWIGxJQ6ftADHPlWCRdxiTaI84dU7rBVqC6zvfaf+TTKbgpDeopP6PTgBTnLw==",
   "success": true,
   "projectFilePath": "F:\\PaymentContext\\PaymentContext.Shared\\PaymentContext.Shared.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\wende\\.nuget\\packages\\flunt\\1.0.5\\flunt.1.0.5.nupkg.sha512",
     "C:\\Users\\wende\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\wende\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
