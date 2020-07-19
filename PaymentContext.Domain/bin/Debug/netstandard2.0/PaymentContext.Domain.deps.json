@@ -9,6 +9,7 @@
     ".NETStandard,Version=v2.0/": {
       "PaymentContext.Domain/1.0.0": {
         "dependencies": {
+          "Flunt": "1.0.5",
           "NETStandard.Library": "2.0.3",
           "PaymentContext.Shared": "1.0.0"
         },

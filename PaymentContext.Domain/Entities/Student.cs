@@ -28,11 +28,16 @@ namespace PaymentContext.Domain.Entities
 
         public void AddSubscription(Subscription subscription)
         {
+            if(subscription.Payments.Count == 0)
+            {
+
+            }
             if (HasSubscriptionActive())
                 AddNotification("Student.Subscription", "Student already has active subscription.");
 
-            //AddNotifications(new Contract().Requires()
-            //    .IsFalse(HasSubscriptionActive(), "Student.Subscription", "Student already has active subscription."));
+            AddNotifications(new Contract().Requires()
+                .IsFalse(HasSubscriptionActive(), "Student.Subscription", "Student already has active subscription.")
+                .IsGreaterThan(0,subscription.Payments.Count, "Student.Subscription.Payments", "This subscriptin does not have paymentest."));
         }
         private bool HasSubscriptionActive()
         {
